@@ -81,10 +81,11 @@ nav ul li a {
 .about-me-2 {
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 10%;
+    /* margin-left: 30%;
+    margin-right: 10%; */
     line-height: 200%;
     filter: drop-shadow(0px 4px rgba(180, 7, 7, 0.25));
+    justify-content: end;
 }
 
 .about-desc {
@@ -162,7 +163,8 @@ nav ul li a {
 .contact-2 {
     background-color: white;
     align-content: center;
-    width: 50%;
+    /* Added width from 50% to 75% to fit in mobile media */
+    width: 75%;
     height: 200px;
     line-height: 200%;
     color: black;
