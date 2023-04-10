@@ -93,6 +93,7 @@ nav ul li a {
     margin-top: 5%;
     margin-bottom: 4%;
     height: 7em;
+    font-weight: 600;
 }
 
 .profile {
@@ -134,6 +135,7 @@ nav ul li a {
 .skills p {
     margin-left: 10%;
     height: 50px;
+    font-weight: 700;
 }
 
 /* Work Section */
@@ -175,6 +177,15 @@ nav ul li a {
     flex-direction: column;
     border-radius: 20px;
 }
+
+.contact-2 a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+}
+
+/* Footer Section */
 
 footer {
     width: 100%;
