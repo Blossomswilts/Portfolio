@@ -2,13 +2,15 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     background-color: #373A37; 
     /* color: white; */
 }
 
 :root {
-
+  --space: 16px;
+  --column-num: 4;
+  --height-row: 300px;
 }
 
 p {
@@ -18,6 +20,9 @@ p {
 body {
     position: relative;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header Styling */
@@ -34,11 +39,13 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 20px 0;
     font-size: 24px;
 }
 
+header nav  {
+    justify-content: space-between;
+}
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -119,38 +126,23 @@ nav ul li a {
 /* Work Section */
 
 .work {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15%;
-    flex-direction: row;
+    margin-top: 10%;
+    padding: var(--space);
+    display: grid;
+    grid-template-columns: repeat(var(--column-num), 1fr);
+    grid-auto-rows: var(--height-row);
+    gap: var(--space);
 }
 
-.place-1 {
-    height: 520px;
-    width: 520px;
-    flex-basis: auto;
-    border-radius: 10px;
-    margin-top: 5%;
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.place-2 {
-    height: 250px;
-    width: 250px;
-    flex-basis: auto;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 3.5%;
-    margin-left:  3.5%;
-}
-
-.work-section-1 {
-    width: 50%;
-    padding-left: 150px;
-}
-
-.work-section-2 {
-    flex-wrap: wrap;
-    width: 50%;
+.work .place-1 {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 /* Contact Me Section */
@@ -162,7 +154,7 @@ nav ul li a {
     height: 200px;
     line-height: 200%;
     color: black;
-    margin: 20% 25% 4% 25%;
+    margin: 10% 25% 4% 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,15 +166,39 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
-    height: 140px;
+    height: 160px;
 }
 
 .link {
     flex-direction: row;
     padding-right: 60px;
+    width: 10%;
+}
+
+.link img {
+    padding: 10%;
 }
 
 .nav-link {
-    flex-direction: column;
-    padding-left: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link li {
+    align-items: center;
+    justify-items: center;
+}
+
+/* Media Queeries */
+
+@media screen and (max-width: 1024px) {
+    .work {
+        --column-num: 2;
+        --height-row: 200px;
+    }
+
+    header {
+        flex-direction: column;
+    }
 }
