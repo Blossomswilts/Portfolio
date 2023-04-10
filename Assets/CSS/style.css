@@ -63,6 +63,18 @@ nav ul li a {
     top: -30px;
 }
 
+.about-h:hover {
+    color: #1B6800;
+}
+
+.work-h:hover {
+    color: #CC2727;
+}
+
+.contact-h:hover {
+    color: #1D40BB;
+}
+
 /* About Me Section */
 
 
@@ -200,5 +212,9 @@ footer {
 
     header {
         flex-direction: column;
+    }
+    
+    .about-desc {
+        overflow: scroll;
     }
 }
