@@ -5,6 +5,7 @@
     font-family: Helvetica, Arial, sans-serif;
     background-color: #373A37; 
     /* color: white; */
+
 }
 
 :root {
@@ -23,6 +24,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../pictures/Desktop-2-wide.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Header Styling */
@@ -81,8 +85,6 @@ nav ul li a {
 .about-me-2 {
     display: flex;
     flex-direction: column;
-    /* margin-left: 30%;
-    margin-right: 10%; */
     line-height: 200%;
     filter: drop-shadow(0px 4px rgba(180, 7, 7, 0.25));
     justify-content: end;
@@ -103,6 +105,10 @@ nav ul li a {
     top: 7em;
     flex-shrink: 1;
     z-index: 1;
+}
+
+.profile h2 {
+    align-items: flex-end;
 }
 
 .about-box {
@@ -236,6 +242,17 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
-    
+@media screen and (max-width: 1130px) {
+
+    header nav {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    footer nav {
+        display: block;
+        text-align: center;
+    }
 }
