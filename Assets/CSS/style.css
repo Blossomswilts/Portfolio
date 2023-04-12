@@ -255,5 +255,12 @@ footer {
     footer nav {
         display: block;
         text-align: center;
+        height: 30%;
+    }
+
+    footer .nav-link .link {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 }
